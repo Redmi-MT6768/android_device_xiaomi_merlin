@@ -44,6 +44,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.mt6768.rc \
+    init.safailnet.rc \
     fstab.mt6768
 
 # DT2W
