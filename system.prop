@@ -66,3 +66,8 @@ wifi.tethering.interface=ap0
 
 # Zygote preforking
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# IMS 
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
