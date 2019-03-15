@@ -456,6 +456,9 @@
          Must be in the range specified by minimum and maximum.
          Equivalent to 67/255 (default for this device)    -->
     <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.26274509804</item>
+
+    <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
+    <bool name="config_zramWriteback">true</bool>
     
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
