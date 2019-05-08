@@ -31,6 +31,9 @@ ro.kernel.zio=38,108,105,16
 # MDLOG
 persist.sys.mdlog_dumpback=2
 
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
 # Order
 ro.product.property_source_order=odm,vendor,product,system
 
