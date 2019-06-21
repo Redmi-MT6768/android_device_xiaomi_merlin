@@ -25,6 +25,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
+# Dynamic Partitions 
+PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_BUILD_SUPER_PARTITION := false
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.mt6768
