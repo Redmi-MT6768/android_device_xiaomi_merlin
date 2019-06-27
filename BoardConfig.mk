@@ -91,6 +91,7 @@ BOARD_MAIN_SIZE := 6012043264
 BOARD_MAIN_PARTITION_LIST := \
     product \
     system
+BOARD_SUPER_PARTITION_ERROR_LIMIT := 6012043264
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := merlin,merlin_eea,merlinnfc
