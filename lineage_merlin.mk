@@ -29,8 +29,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_DEVICE := merlin
 PRODUCT_NAME := lineage_merlin
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi Note 9
-PRODUCT_MANUFACTURER := xiaomi
+PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_VENDOR := xiaomi
