@@ -58,7 +58,6 @@
      <bool name="config_dozeAlwaysOnEnabled">true</bool>
 
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
-     <bool name="config_dynamic_bind_ims">true</bool>
      <bool name="config_eap_sim_based_auth_supported">true</bool>
 
     <!--  Whether Multiuser UI should be shown -->
@@ -292,9 +291,6 @@
 
     <!-- Regex of wired ethernet ifaces -->
      <string name="config_ethernet_iface_regex">eth\\d</string>
-
-    <!-- ImsService package name to bind to by default, if config_dynamic_bind_ims is true -->
-     <string name="config_ims_package">com.mediatek.ims</string>
 
     <!-- MMS user agent string -->
      <string name="config_mms_user_agent">Android-Mms/0.1</string>
@@ -737,5 +733,4 @@
         <item>7,1</item>
         <item>9,1</item>
     </string-array>
-
 </resources>
