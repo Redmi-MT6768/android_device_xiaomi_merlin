@@ -16,3 +16,11 @@ on post-fs
     # (at post-fs, the fstab has already been used to mount the partitions,
     #  so it is fine to just revert back)
     umount /vendor/etc/fstab.mt6768
+
+    # Disable OEM Lights 
+    mount none /dev/null vendor/lib/hw/lights.mt6768.so bind
+    mount none /dev/null vendor/lib/hw/android.hardware.light@2.0-impl-mediatek.so bind
+    mount none /dev/null vendor/bin/hw/android.hardware.light@2.0-service-mediatek bind
+    mount none /dev/null vendor/lib64/hw/lights.mt6768.so bind
+    mount none /dev/null vendor/lib64/hw/android.hardware.light@2.0-impl-mediatek.so bind
+    mount none /dev/null vendor/etc/init/android.hardware.light@2.0-service-mediatek.rc bind
