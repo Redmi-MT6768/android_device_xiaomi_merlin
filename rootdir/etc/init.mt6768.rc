@@ -6,5 +6,9 @@ on init
     # We only need it to be overridden before things are mounted
     mount none /system/etc/fstab.mt6768 /vendor/etc/fstab.mt6768 bind
 
+on fs
+    mount_all /vendor/etc/fstab.mt6768 --early
+    mount_all /vendor/etc/fstab.mt6768 --late
+
 on post-fs
     mount none /system/etc/fstab.mt6768 /vendor/etc/fstab.mt6768 bind
