@@ -1,0 +1,18 @@
+[
+  {
+    "repository" : "kernel_xiaomi_mt6785",
+    "target_path": "kernel/xiaomi/mt6785"
+  },
+  {
+    "repository" : "vendor_redmi_begonia",
+    "target_path": "vendor/redmi/begonia"
+  },
+  {
+    "repository" : "vendor_mediatek_hardware_telephony-ext",
+    "target_path": "vendor/mediatek/hardware/telephony-ext"
+  },
+  {
+    "repository" : "vendor_mediatek_hardware_interfaces",
+    "target_path": "vendor/mediatek/hardware/interfaces"
+  }
+]
