@@ -14,6 +14,12 @@ service charger /system/bin/charger
     group system graphics
     seclabel u:r:healthd:s0
 
+on property:persist.sys.merlin.dt2w=0
+    exec /system/bin/sendevent /dev/input/event3 0 1 4
+
+on property:persist.sys.merlin.dt2w=1
+    exec /system/bin/sendevent /dev/input/event3 0 1 5
+
 on charger
     # Turn backlight on and switch to backlight trigger
     write /sys/class/leds/lcd-backlight/brightness "1000"
