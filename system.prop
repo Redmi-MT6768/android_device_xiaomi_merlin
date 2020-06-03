@@ -134,3 +134,6 @@ ro.treble.enabled=true
 ro.mediatek.platform=MT6768
 ro.hardware.egl=mali
 ro.hardware=mt6768
+
+# Zygote preforking
+persist.device_config.runtime_native.usap_pool_enabled=true
