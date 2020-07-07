@@ -485,4 +485,7 @@
         <item>35</item>
     </integer-array>
 
+    <!-- Display has physical cutout -->
+    <bool name="config_physicalDisplayCutout">true</bool>
+
 </resources>
