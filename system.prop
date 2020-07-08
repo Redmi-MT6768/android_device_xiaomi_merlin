@@ -33,6 +33,7 @@ persist.sys.mdlog_dumpback=2
 
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
+debug.stagefright.ccodec=0
 
 # Order
 ro.product.property_source_order=odm,vendor,product,system
