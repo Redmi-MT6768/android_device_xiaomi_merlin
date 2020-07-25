@@ -719,6 +719,11 @@ vendor/lib64/hw/gralloc.mt6785.so
 vendor/lib64/hw/hwcomposer.mt6785.so
 vendor/lib64/hw/memtrack.mt6785.so
 
+# EngineerMode 
+-product/priv-app/EngineerMode.apk
+lib/libem_support_jni.so|8a9eb1aa68e100f95d79a2fbbd54416ae34a917f
+lib64/libem_support_jni.so|480af237ff4df7ec627caf95488340a8b12dd181
+
 # Fido
 vendor/bin/fidoca
 vendor/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-service.rc
