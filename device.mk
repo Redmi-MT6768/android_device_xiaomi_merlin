@@ -51,3 +51,7 @@ PRODUCT_PACKAGES += \
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
+    
+# NFC stack (AOSP)
+PRODUCT_PACKAGES += \
+    NfcNci
