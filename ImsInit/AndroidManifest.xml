@@ -13,6 +13,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
+        <service android:name="org.lineageos.xiaomi.imsinit.PhoneStateService"/>
     </application>
     
 </manifest>

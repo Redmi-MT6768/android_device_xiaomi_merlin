@@ -28,23 +28,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     public void onReceive(final Context context, Intent intent) {
         Log.i(LOG_TAG, "onBoot");
         
-        SharedPreferences prefs = context.getSharedPreferences("prefs", Context.MODE_PRIVATE);
-        
-        if (!prefs.getBoolean("booted", false)) {
-            Log.i(LOG_TAG, "Skipping first boot");
-            prefs.edit().putBoolean("booted", true).commit();
-            return;
-        }
-        
-        if (ImsManager.isEnhanced4gLteModeSettingEnabledByUser(context)) {
-            Log.i(LOG_TAG, "VoLTE enabled, trying to toggle it off and back on");
-            ImsManager.setEnhanced4gLteModeSetting(context, false);
-            try {
-                Thread.sleep(1000);
-            } catch (Exception e) {
-                // Ignore
-            }
-            ImsManager.setEnhanced4gLteModeSetting(context, true);
-        }
+        context.startService(new Intent(context, PhoneStateService.class));
     }
 }
