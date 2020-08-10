@@ -27,5 +27,9 @@ android_app {
 
     optimize: {
         enabled: false,
-    }
+    },
+
+    required: [
+        "privapp-permissions_org.lineageos.dt2w.merlin"
+    ]
 }
