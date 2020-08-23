@@ -18,9 +18,6 @@ persist.camera.dualcal.state=-1
 ro.opengles.version=196610
 ro.zygote.preload.enable=0
 
-# HW
-qemu.hw.mainkeys=0
-
 # IPO
 sys.ipo.disable=1
 
