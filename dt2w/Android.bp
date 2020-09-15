@@ -33,3 +33,10 @@ android_app {
         "privapp-permissions_org.lineageos.dt2w.merlin"
     ]
 }
+
+prebuilt_etc {
+    name: "privapp-permissions_org.lineageos.dt2w.merlin",
+    sub_dir: "permissions",
+    src: "privapp-permissions_org.lineageos.dt2w.merlin.xml",
+    filename_from_src: true,
+}
