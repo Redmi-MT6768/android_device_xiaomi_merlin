@@ -15,7 +15,7 @@
  */
 
 android_app {
-    name: "DT2W-Service-Begonia",
+    name: "DT2W-Service-Merlin",
 
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
@@ -29,13 +29,13 @@ android_app {
     },
 
     required: [
-        "privapp-permissions_org.pe.dt2w.begonia"
+        "privapp-permissions_org.pe.dt2w.merlin"
     ]
 }
 
 prebuilt_etc {
-    name: "privapp-permissions_org.pe.dt2w.begonia",
+    name: "privapp-permissions_org.pe.dt2w.merlin",
     sub_dir: "permissions",
-    src: "privapp-permissions_org.pe.dt2w.begonia.xml",
+    src: "privapp-permissions_org.pe.dt2w.merlin.xml",
     filename_from_src: true,
 }

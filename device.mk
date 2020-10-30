@@ -22,7 +22,7 @@ PRODUCT_PACKAGES += \
 
 # DT2W
 PRODUCT_PACKAGES += \
-    DT2W-Service-Begonia
+    DT2W-Service-Merlin
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -68,4 +68,4 @@ PRODUCT_PACKAGES += \
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
 # Inherit vendor
-$(call inherit-product, vendor/redmi/begonia/begonia-vendor.mk)
+$(call inherit-product, vendor/xiaomi/merlin/merlin-vendor.mk)

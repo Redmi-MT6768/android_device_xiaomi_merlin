@@ -23,24 +23,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit from begonia device
-$(call inherit-product, device/redmi/begonia/device.mk)
+$(call inherit-product, device/xiaomi/merlin/device.mk)
 
 # Inherit from our custom product configuration
 TARGET_BOOT_ANIMATION_RES := 1080
 $(call inherit-product, vendor/cesium/config/common_full_phone.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := begonia
-PRODUCT_NAME := cesium_begonia
+PRODUCT_DEVICE := merlin
+PRODUCT_NAME := cesium_merlin
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi Note 8 Pro
+PRODUCT_MODEL := Redmi Note 9
 PRODUCT_MANUFACTURER := Xiaomi
 
 BUILD_FINGERPRINT := "google/sunfish/sunfish:11/RP1A.201005.006/6828489:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="begonia-user 10 QP1A.190711.020 V12.0.3.0.QGGMIXM release-keys" \
-    PRODUCT_NAME="begonia" \
-    TARGET_DEVICE="begonia"
+    PRIVATE_BUILD_DESC="merlin-user 10 QP1A.190711.020 V11.0.2.0.QJOEUXM release-keys" \
+    PRODUCT_NAME="merlin" \
+    TARGET_DEVICE="merlin"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

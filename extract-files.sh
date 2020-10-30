@@ -7,8 +7,8 @@
 
 set -e
 
-DEVICE=begonia
-VENDOR=redmi
+DEVICE=merlin
+VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2019
 
