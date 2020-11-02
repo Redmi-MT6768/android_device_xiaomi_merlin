@@ -31,5 +31,5 @@ def AddImage(info, basename, dest):
 
 def OTA_InstallEnd(info):
   info.script.Print("Patching vbmeta and dtbo images...")
-  AddImage(info, "vbmeta.img", "/dev/block/by-name/vbmeta")
-  AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
+  AddImage(info, "vbmeta.img", "/dev/block/platform/bootdevice/by-name/vbmeta")
+  AddImage(info, "dtbo.img", "/dev/block/platform/bootdevice/by-name/dtbo")
