@@ -74,6 +74,7 @@ on post-fs-data
     chmod 0666 /dev/video1
 
 on boot
+    setprop init.svc.console stopped
 
 # Disable AOSP RIL if MTK RIL is up
 on property:vendor.ril.mtk=1
