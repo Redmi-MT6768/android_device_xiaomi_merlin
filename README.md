@@ -18,4 +18,4 @@
 | Release Date            | April 2020                                            |
 
 ## Device Picture
-![Xiaomi Redmi Note 9](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mi.com%2Fuk%2Fredmi-note-9%2F&psig=AOvVaw1UXIz71zlAq5BDj0zCO2EP&ust=1604147910441000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLj28uSq3OwCFQAAAAAdAAAAABAF)
+![Xiaomi Redmi Note 9](https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/mobilephones/Xiaomi_Note_9_ph/Xiaomi_Note_9_ph_L_1.jpg)
