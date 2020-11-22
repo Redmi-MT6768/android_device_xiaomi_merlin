@@ -5,6 +5,7 @@ on init
     # Override vendor fstab
     # We only need it to be overridden before things are mounted
     mount none /system/etc/fstab.mt6768 /vendor/etc/fstab.mt6768 bind
+    mount none /vendor/lost+found /vendor/overlay bind
 
 on fs
     mount_all /vendor/etc/fstab.mt6768 --early
