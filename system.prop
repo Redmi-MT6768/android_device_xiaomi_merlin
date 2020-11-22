@@ -13,6 +13,7 @@ Build.BRAND=MTK
 
 # Camera
 persist.camera.dualcal.state=-1
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
 
 # Display
 ro.opengles.version=196610
