@@ -28,6 +28,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/merlin/merlin-vendor.mk)
 
+# IMS
+$(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_policy_configuration.xml
 
@@ -83,6 +86,9 @@ PRODUCT_PACKAGES += \
 # NFC stack (AOSP)
 PRODUCT_PACKAGES += \
     NfcNci
+
+# Telephony
+PRODUCT_PACKAGES += vendor.mediatek.hardware.videotelephony@1.0
 
 # IMS
 PRODUCT_BOOT_JARS += \
