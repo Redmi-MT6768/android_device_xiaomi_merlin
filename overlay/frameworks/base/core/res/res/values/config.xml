@@ -227,9 +227,6 @@
     <!-- The restoring is handled by modem if it is true-->
      <bool name="skip_restoring_network_selection">true</bool>
 
-    <!-- Height of the status bar -->
-     <dimen name="status_bar_height_portrait">24.0dip</dimen>
-
     <!-- User activity timeout: Maximum screen dim duration as a percentage of screen off timeout.
     
          This resource is similar to config_maximumScreenDimDuration but the maximum
