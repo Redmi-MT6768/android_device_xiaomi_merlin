@@ -87,22 +87,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NfcNci
 
-# Telephony
-PRODUCT_PACKAGES += vendor.mediatek.hardware.videotelephony@1.0
-
-# IMS
-PRODUCT_BOOT_JARS += \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common
-
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
-
 # RcsService
 PRODUCT_PACKAGES += \
     RcsService
