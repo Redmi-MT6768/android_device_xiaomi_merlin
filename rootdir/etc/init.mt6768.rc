@@ -12,9 +12,10 @@ on init
 
 service charger /system/bin/charger
     class charger
-    critical
-    group system graphics
-    seclabel u:r:healthd:s0
+    user system
+    group system graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
 
 on property:persist.sys.merlin.dt2w=0
     exec /system/bin/sendevent /dev/input/event3 0 1 4
@@ -23,6 +24,18 @@ on property:persist.sys.merlin.dt2w=1
     exec /system/bin/sendevent /dev/input/event3 0 1 5
 
 on charger
+    write /proc/hps/enabled 0
+    write /sys/devices/system/cpu/cpu0/online 1
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/devices/system/cpu/cpu7/online 0
+    write /sys/devices/system/cpu/cpu6/online 0
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu4/online 0
+
+    write /sys/power/pm_async 0
+    
     # Turn backlight on and switch to backlight trigger
     write /sys/class/leds/lcd-backlight/brightness "1000"
     write /sys/class/leds/lcd-backlight/trigger "backlight"
