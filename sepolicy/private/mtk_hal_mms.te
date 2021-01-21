@@ -14,3 +14,5 @@ add_hwservice(gmscore_app, mtk_hal_mms_hwservice)
 # Allow binder calls from gmscore_app to mtk_hal_mms and vice versa
 binder_call(gmscore_app, mtk_hal_mms)
 binder_call(mtk_hal_mms, gmscore_app)
+
+allow { appdomain -isolated_app }  mtk_hal_mms_hwservice:hwservice_manager find;
