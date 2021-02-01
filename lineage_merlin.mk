@@ -31,3 +31,11 @@ PRODUCT_NAME := lineage_merlin
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 9
 PRODUCT_MANUFACTURER := xiaomi
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+TARGET_VENDOR := xiaomi
+TARGET_VENDOR_PRODUCT_NAME := merlin
+PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="merlin-user 10 QP1A.190711.020 V11.0.2.0.QJOEUXM release-keys"
+
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := Redmi/merlin_eea/merlin:10/QP1A.190711.020/V11.0.2.0.QJOEUXM:user/release-keys
