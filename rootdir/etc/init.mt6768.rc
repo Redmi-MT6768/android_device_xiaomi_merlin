@@ -7,6 +7,12 @@ on init
     mount none /system/etc/fstab.mt6768 /vendor/etc/fstab.mt6768 bind
     mount none /vendor/lost+found /vendor/overlay bind
 
+service charger /system/bin/charger
+    class charger
+    critical
+    group system graphics
+    seclabel u:r:healthd:s0
+
 on fs
     mount_all /vendor/etc/fstab.mt6768 --early
     mount_all /vendor/etc/fstab.mt6768 --late
