@@ -1,145 +1,71 @@
-#
-# from device/mediatek/system/common/system.prop
-#
-ro.product.property_source_order=odm,vendor,product,system
-
-vendor.rild.libpath=mtk-ril.so
-vendor.rild.libargs=-d /dev/ttyC0
-
-# Memory optimization
-ro.sys.fw.bservice_enable=true
-ro.sys.fw.bservice_limit=5
-ro.sys.fw.bservice_age=5000
-ro.sys.fw.bg_apps_limit=24
-
-wifi.interface=wlan0
-ro.mediatek.wlan.wsc=1
-ro.mediatek.wlan.p2p=1
-mediatek.wlan.ctia=0
-
-
-#
-wifi.tethering.interface=ap0
-#
-
-ro.opengles.version=196610
-# ro.kernel.qemu=1
-# ro.kernel.qemu.gles=0
-
-wifi.direct.interface=p2p0
-#dalvik.vm.heapgrowthlimit=256m
-#dalvik.vm.heapsize=512m
-
-# USB MTP WHQL
-ro.sys.usb.mtp.whql.enable=0
-
-# Power off opt in IPO
-sys.ipo.pwrdncap=2
-
-ro.sys.usb.storage.type=mtp
-
-# USB BICR function
-ro.sys.usb.bicr=no
-
-# USB Charge only function
-ro.sys.usb.charging.only=yes
-
-# audio
-ro.camera.sound.forced=0
+# Audio
+audio_para_version=J15S-Audiopara-V19-20200420
 ro.audio.silent=0
-
-#audio-add for misound
+ro.camera.sound.forced=0
+ro.vendor.audio.game.effect=true
+ro.vendor.audio.sos=true
 ro.vendor.audio.soundfx.type=mi
 ro.vendor.audio.soundfx.usb=true
-
-ro.zygote.preload.enable=0
-
-# temporary enables NAV bar (soft keys)
-qemu.hw.mainkeys=0
-
-ro.kernel.zio=38,108,105,16
-#ro.kernel.qemu=1
-#ro.kernel.qemu.gles=0
-#ro.boot.selinux=disable
-
-# Disable dirty region for Mali
-#debug.hwui.render_dirty_regions=false
-
-
-# performance
-ro.mtk_perf_simple_start_win=1
-ro.mtk_perf_fast_start_win=1
-ro.mtk_perf_response_time=1
-
-# disable ipo for development
-sys.ipo.disable=1
-
-# identity
-Build.BRAND=MTK
-
-# end of device/mediatek/system/common/system.prop
-
-#
-# from device/xiaomi/merlin/merlin_audio.prop
-#
-#audio parameter version
-audio_para_version=J15S-Audiopara-V19-20200420
-
-#volume boost feature, 3 modes are auto, manual, none
 ro.vendor.audio.voice.volume.boost=manual
 
-# end of device/xiaomi/merlin/merlin_audio.prop
+# Brand
+Build.BRAND=MTK
 
-#
-# from device/xiaomi/merlin/merlin_game_effect.prop
-#
-#enable game affect
-ro.vendor.audio.game.effect=true
-# end of device/xiaomi/merlin/merlin_game_effect.prop
+# Camera
+persist.camera.dualcal.state=-1
 
-#
-# from device/xiaomi/merlin/merlin_sos.prop
-#
-# add audio sos support
-ro.vendor.audio.sos=true
-# end of device/xiaomi/merlin/merlin_sos.prop
+# Display
+ro.opengles.version=196610
+ro.zygote.preload.enable=0
 
-#
-# from device/xiaomi/merlin/additional.prop
-#
-#add for FM prop
-persist.internalAntenna.enable=true
+# HW
+qemu.hw.mainkeys=0
 
-#add persist.sys.mdlog_dumpback=2 for enable md mini ramdump to fix HQ-55013
+# IPO
+sys.ipo.disable=1
+
+# Kernel
+ro.kernel.zio=38,108,105,16
+
+# MDLOG
 persist.sys.mdlog_dumpback=2
 
-#add for dual calibration prop
+# Order
+ro.product.property_source_order=odm,vendor,product,system
 
-persist.camera.dualcal.state=-1
-# end of device/xiaomi/merlin/additional.prop
+# Perf
+ro.mtk_perf_fast_start_win=1
+ro.mtk_perf_response_time=1
+ro.mtk_perf_simple_start_win=1
 
-#
-# from device/xiaomi/merlin/usb_otg.prop
-#
-# support otg reverse charge
-persist.vendor.otg_control=true
-ro.secure=0
-ro.adb.secure=0
-ro.debuggable=1
-ro.sf.lcd_density=440
-persist.sys.isUsbOtgEnabled=true
-ro.sys.usb.mtp.whql.enable=0
-ro.sys.usb.storage.type=mtp
-ro.treble.enabled=true
-ro.mediatek.platform=MT6768
-ro.hardware.egl=mali
-ro.hardware=mt6768
-
-# Zygote preforking
-persist.device_config.runtime_native.usap_pool_enabled=true
+# Power
+sys.ipo.pwrdncap=2
 
 # SurfaceFlinger
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3 
 ro.surface_flinger.running_without_sync_framework=true
 ro.surface_flinger.vsync_event_phase_offset_ns=2000000 
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
+
+# Radio
+persist.internalAntenna.enable=true
+vendor.rild.libargs=-d /dev/ttyC0
+vendor.rild.libpath=mtk-ril.so
+
+# USB
+persist.vendor.otg_control=true
+ro.sys.usb.bicr=no
+ro.sys.usb.charging.only=yes
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp
+
+# WiFi
+mediatek.wlan.ctia=0
+ro.mediatek.wlan.p2p=1
+ro.mediatek.wlan.wsc=1
+wifi.direct.interface=p2p0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
+
+# Zygote preforking
+persist.device_config.runtime_native.usap_pool_enabled=true
