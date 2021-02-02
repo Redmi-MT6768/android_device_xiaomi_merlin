@@ -21,10 +21,6 @@ on charger
 on fs
     mount_all /vendor/etc/fstab.mt6768 --early
     mount_all /vendor/etc/fstab.mt6768 --late
-    
-    # Correct VideoCodec permission
-    chmod 0666 /dev/video0
-    chmod 0666 /dev/video1
 
 on post-fs
     # Unmount the overridden fstab because the SELinux label is incorrect
@@ -40,6 +36,11 @@ on post-fs
     mount none /dev/null vendor/lib64/hw/lights.mt6768.so bind
     mount none /dev/null vendor/lib64/hw/android.hardware.light@2.0-impl-mediatek.so bind
     mount none /dev/null vendor/etc/init/android.hardware.light@2.0-service-mediatek.rc bind
+
+on post-fs-data
+    # Correct VideoCodec permission
+    chmod 0666 /dev/video0
+    chmod 0666 /dev/video1
 
 on boot
 
