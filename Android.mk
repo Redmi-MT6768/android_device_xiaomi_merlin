@@ -16,6 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),merlin,merlin_eea,merlinnfc)
+ifeq ($(TARGET_DEVICE),merlin)
 
 endif
