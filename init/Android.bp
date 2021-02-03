@@ -17,7 +17,6 @@ cc_library_static {
     name: "libinit_merlin",
     recovery_available: true,
     srcs: ["init_merlin.cpp"],
-    recovery_available: true,
     include_dirs: [
         "system/core/base/include",
         "system/core/init"
