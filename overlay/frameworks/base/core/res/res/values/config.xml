@@ -22,71 +22,29 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- If true, the screen can be rotated via the accelerometer in all 4
-         rotations as the default behavior. -->
-     <bool name="config_allowAllRotations">false</bool>
-
-    <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
-         Software implementation will be used if config_hardware_auto_brightness_available is not set -->
-     <bool name="config_automatic_brightness_available">true</bool>
-
-    <!-- Boolean indicating if current platform supports HFP inband ringing -->
-     <bool name="config_bluetooth_hfp_inband_ringing_support">false</bool>
-
-    <!-- Boolean indicating if current platform supports BLE peripheral mode -->
-     <bool name="config_bluetooth_le_peripheral_mode_supported">false</bool>
-
-    <!-- Whether camera shutter sound is forced or not  (country specific). -->
-     <bool name="config_camera_sound_forced">true</bool>
-
-    <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
-     <bool name="config_cellBroadcastAppLinks">true</bool>
-
     <!-- Flag specifying whether VoLTE is available on device -->
      <bool name="config_device_volte_available">true</bool>
 
     <!-- Flag specifying whether VT is available on device -->
      <bool name="config_device_vt_available">true</bool>
 
-    <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
-     <bool name="config_displayBlanksAfterDoze">true</bool>
+    <!-- Flag specifying whether WFC over IMS is available on device -->
+    <bool name="config_device_wfc_ims_available">true</bool>     
 
     <!-- If true, the doze component is not started until after the screen has been turned off
          and the screen off animation has been performed. -->
      <bool name="config_dozeAfterScreenOffByDefault">true</bool>
-     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
-     <bool name="config_dozeAlwaysOnEnabled">true</bool>
-
-    <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
-     <bool name="config_eap_sim_based_auth_supported">true</bool>
+     
+    <!-- Flag indicating whether we should enable the automatic brightness.
+         Software implementation will be used if config_hardware_auto_brightness_available is not set -->
+    <bool name="config_automatic_brightness_available">true</bool>
+    
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+         autodetected from the Configuration. -->
+    <bool name="config_showNavigationBar">true</bool>         
 
     <!--  Whether Multiuser UI should be shown -->
      <bool name="config_enableMultiUserUI">true</bool>
-
-    <!-- Whether to enable network location overlay which allows network
-         location provider to be replaced by an app at run-time. When disabled,
-         only the config_networkLocationProviderPackageName package will be
-         searched for network location provider, otherwise packages whose
-         signature matches the signatures of config_locationProviderPackageNames
-         will be searched, and the service with the highest version number will
-         be picked. Anyone who wants to disable the overlay mechanism can set it
-         to false.
-    -->
-     <bool name="config_enableNetworkLocationOverlay">false</bool>
-
-    <!-- Whether WiFi display is supported by this device.
-         There are many prerequisites for this feature to work correctly.
-         Here are a few of them:
-         * The WiFi radio must support WiFi P2P.
-         * The WiFi radio must support concurrent connections to the WiFi display and
-           to an access point.
-         * The Audio Flinger audio_policy.conf file must specify a rule for the "r_submix"
-           remote submix module.  This module is used to record and stream system
-           audio output to the WiFi display encoder in the media server.
-         * The remote submix module "audio.r_submix.default" must be installed on the device.
-         * The device must be provisioned with HDCP keys (for protected content).
-    -->
-     <bool name="config_enableWifiDisplay">false</bool>
 
     <!-- Whether the display cutout region of the main built-in display should be forced to
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
@@ -104,61 +62,14 @@
          The default is false. -->
      <bool name="config_lidControlsSleep">true</bool>
 
-    <!-- Should the pinner service pin the Camera application? -->
-     <bool name="config_pinnerCameraApp">false</bool>
-
     <!-- Should the pinner service pin the Home application? -->
-     <bool name="config_pinnerHomeApp">false</bool>
-
-    <!-- Power Management: Specifies whether to decouple the auto-suspend state of the
-         device from the display on/off state.
-         When false, autosuspend_disable() will be called before the display is turned on
-         and autosuspend_enable() will be called after the display is turned off.
-         This mode provides best compatibility for devices using legacy power management
-         features such as early suspend / late resume.
-         When true, autosuspend_display() and autosuspend_enable() will be called
-         independently of whether the display is being turned on or off.  This mode
-         enables the power manager to suspend the application processor while the
-         display is on.
-         This resource should be set to "true" when a doze component has been specified
-         to maximize power savings but not all devices support it.
-         Refer to autosuspend.h for details.
-    -->
-     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">false</bool>
-
-    <!-- Power Management: Specifies whether to decouple the interactive state of the
-         device from the display on/off state.
-         When false, setInteractive(..., true) will be called before the display is turned on
-         and setInteractive(..., false) will be called after the display is turned off.
-         This mode provides best compatibility for devices that expect the interactive
-         state to be tied to the display state.
-         When true, setInteractive(...) will be called independently of whether the display
-         is being turned on or off.  This mode enables the power manager to reduce
-         clocks and disable the touch controller while the display is on.
-         This resource should be set to "true" when a doze component has been specified
-         to maximize power savings but not all devices support it.
-         Refer to power.h for details.
-    -->
-     <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
+     <bool name="config_pinnerHomeApp">true</bool>
 
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently in hardware. -->
      <bool name="config_setColorTransformAccelerated">true</bool>
 
-    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
-         autodetected from the Configuration. -->
-     <bool name="config_showNavigationBar">true</bool>
-
-    <!-- Flag indicating if the speed up audio on mt call code should be executed -->
-     <bool name="config_speed_up_audio_on_mt_calls">false</bool>
-
-    <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
-     <bool name="config_supportAudioSourceUnprocessed">false</bool>
-
     <!-- Whether device supports double tap to wake -->
      <bool name="config_supportDoubleTapWake">true</bool>
-
-    <!-- Boolean indicating if current platform supports HFP inband ringing -->
-     <bool name="config_supportSystemNavigationKeys">false</bool>
 
     <!-- Indicate whether to allow the device to suspend when the screen is off
          due to the proximity sensor.  This resource should only be set to true
@@ -167,21 +78,19 @@
          The default is false. -->
      <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
 
-    <!-- True if the device supports Sustained Performance Mode-->
-     <bool name="config_sustainedPerformanceModeSupported">false</bool>
-
-    <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
-     <bool name="config_swipe_up_gesture_setting_available">true</bool>
-
     <!-- Config determines whether to update phone object when voice registration
          state changes. Voice radio tech change will always trigger an update of
          phone object irrespective of this config -->
      <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
-
-    <!-- When true, the tethering upstream network follows the current default
-         Internet network (except when the current default network is mobile,
-         in which case a DUN network will be used if required). -->
-     <bool name="config_tether_upstream_automatic">true</bool>
+     
+    <!-- Set this to true to enable the platform's auto-power-save modes like doze and
+         app standby.  These are not enabled by default because they require a standard
+         cloud-to-device messaging service for apps to interact correctly with the modes
+         (such as to be able to deliver an instant message to the device even when it is
+         dozing).  This should be enabled if you have such services and expect apps to
+         correctly use them when installed on your device.  Otherwise, keep this disabled
+         so that applications can still use their own mechanisms. -->
+    <bool name="config_enableAutoPowerModes">true</bool>     
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
      <bool name="config_unplugTurnsOnScreen">true</bool>
@@ -189,43 +98,6 @@
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
          on the headphone/microphone jack. When false use the older uevent framework. -->
      <bool name="config_useDevInputEventForAudioJack">true</bool>
-
-    <!-- Enable video pause workaround when enabling/disabling the camera. -->
-     <bool name="config_useVideoPauseWorkaround">false</bool>
-
-    <!-- Set to true if the wifi display supports compositing content stored
-         in gralloc protected buffers.  For this to be true, there must exist
-         a protected hardware path for surface flinger to composite and send
-         protected buffers to the wifi display video encoder.
-         If this flag is false, we advise applications not to use protected
-         buffers (if possible) when presenting content to a wifi display because
-         the content may be blanked.
-         This flag controls whether the {@link Display#FLAG_SUPPORTS_PROTECTED_BUFFERS}
-         flag is set for wifi displays.
-    -->
-     <bool name="config_wifiDisplaySupportsProtectedBuffers">false</bool>
-
-    <!-- Boolean indicating whether the wifi chipset has background scan support -->
-     <bool name="config_wifi_background_scan_support">true</bool>
-
-    <!-- Wifi driver supports batched scan -->
-     <bool name="config_wifi_batched_scan_supported">false</bool>
-
-    <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
-     <bool name="config_wifi_dual_band_support">true</bool>
-
-    <!-- Boolean indicating whether single radio chain scan results are to be used for network selection -->
-     <bool name="config_wifi_framework_use_single_radio_chain_scan_results_network_selection">true</bool>
-
-    <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
-     <bool name="config_wifi_softap_acs_supported">true</bool>
-
-    <!-- Enable 802.11ac for Wifi hotspot (SAP) -->
-     <bool name="config_wifi_softap_ieee80211ac_supported">false</bool>
-
-    <!-- Boolean indicating if restoring network selection should be skipped -->
-    <!-- The restoring is handled by modem if it is true-->
-     <bool name="skip_restoring_network_selection">true</bool>
 
     <!-- User activity timeout: Maximum screen dim duration as a percentage of screen off timeout.
     
@@ -269,13 +141,6 @@
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
      <integer name="config_shutdownBatteryTemperature">680</integer>
 
-    <!-- Integer parameters of the wifi to cellular handover feature
-         wifi should not stick to bad networks -->
-     <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz">-83</integer>
-     <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-80</integer>
-     <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_24GHz">-73</integer>
-     <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_5GHz">-70</integer>
-
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
          try to start this dream if possible.  The dream should typically call startDozing()
@@ -285,22 +150,6 @@
          Note that doze dreams are not subject to the same start conditions as ordinary dreams.
          Doze dreams will run whenever the power manager is in a dozing state. -->
      <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
-
-    <!-- Regex of wired ethernet ifaces -->
-     <string name="config_ethernet_iface_regex">eth\\d</string>
-
-    <!-- MMS user agent string -->
-     <string name="config_mms_user_agent">Android-Mms/0.1</string>
-
-    <!-- MMS user agent prolfile url -->
-     <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
-     <string name="config_qualified_networks_service_package">com.android.phone</string>
-
-    <!-- Configure wifi tcp buffersizes in the form:
-         rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
-     <string name="config_wifi_tcp_buffers">524288,1048576,4194304,262144,524288,3670016</string>
-     <string name="config_wlan_data_service_package">com.android.phone</string>
-     <string name="config_wlan_network_service_package">com.android.phone</string>
 
     <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
          percent. The length of this array is assumed to be one greater than
@@ -661,28 +510,6 @@
         <item>/system/lib64/libRSDriver.so</item>
         <item>/system/lib64/libRSCpuRef.so</item>
         <item>/system/lib64/libblas.so</item>
-    </string-array>
-
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
-         should be empty. -->
-    <string-array name="config_tether_bluetooth_regexs">
-        <item>bt-pan</item>
-        <item>bt-dun</item>
-    </string-array>
-
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         USB interfaces.  If the device doesn't want to support tething over USB this should
-         be empty.  An example would be "usb.*" -->
-    <string-array name="config_tether_usb_regexs">
-        <item>rndis\\d</item>
-    </string-array>
-
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
-         should be empty.  An example would be "softap.*" -->
-    <string-array name="config_tether_wifi_regexs">
-        <item>ap\\d</item>
     </string-array>
 
     <!-- An Array of "[Connection name],[ConnectivityManager.TYPE_xxxx],
