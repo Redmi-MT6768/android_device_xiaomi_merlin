@@ -60,6 +60,14 @@ void property_override(string prop, string value)
         __system_property_add(prop.c_str(), prop.size(), value.c_str(), value.size());
 }
 
+void property_override_triple(char const product_prop[], char const system_prop[], char const vendor_prop[],
+    char const value[])
+{
+    property_override(product_prop, value);
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
+}
+
 void check_device()
 {
     struct sysinfo sys;
@@ -119,4 +127,7 @@ void vendor_load_properties()
     for (const string &prop : prop_partitions) {
         property_override(string("ro.product.") + prop + string("model"), model);
     }
+    
+    property_override("ro.build.description", "redfin-user 11 RQ2A.210305.006 7119741 release-keys");
+    property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys");
 }
