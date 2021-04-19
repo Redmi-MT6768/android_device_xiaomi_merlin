@@ -24,3 +24,4 @@ The Xiaomi Redmi Note 9 (codenamed _"merlin"_) is an entry-level smartphone from
 ## Device picture
 
 ![Xiaomi Redmi Note 9](https://akm-img-a-in.tosshub.com/indiatoday/images/story/202004/Redmi_Note_9.jpeg)
+# test
