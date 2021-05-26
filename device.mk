@@ -21,3 +21,8 @@ $(call inherit-product, device/xiaomi/mt6768-common/mt6768-common.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/merlin/merlin-vendor.mk)
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlay
+
