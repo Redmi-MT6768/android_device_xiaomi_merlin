@@ -23,8 +23,6 @@ TARGET_BOOTLOADER_BOARD_NAME := merlin
 
 # Kernel
 TARGET_KERNEL_CONFIG := merlin_defconfig
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := merlin,merlin_eea,merlinnfc
