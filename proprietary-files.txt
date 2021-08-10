@@ -374,7 +374,6 @@ vendor/lib64/libstagefrighthw.so
 
 # Mediatek
 vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
-vendor/bin/hw/android.hardware.vibrator-service.mediatek
 vendor/bin/hw/vendor.mediatek.hardware.dfps@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.dplanner@2.0-service
 vendor/bin/hw/vendor.mediatek.hardware.gpu@1.0-service
@@ -855,14 +854,6 @@ vendor/lib/hw/thermal.mt6768.so
 vendor/lib64/hw/thermal.mt6768.so
 
 # Time
-
-# Vibrator
-vendor/etc/init/vibrator-mtk-default.rc
--vendor/etc/vintf/manifest/vibrator-mtk-default.xml
-vendor/lib/hw/vibrator.default.so
-vendor/lib/hw/vibrator.mt6768.so
-vendor/lib64/hw/vibrator.default.so
-vendor/lib64/hw/vibrator.mt6768.so
 
 # WiFi
 vendor/bin/hw/android.hardware.wifi@1.0-service-lazy
