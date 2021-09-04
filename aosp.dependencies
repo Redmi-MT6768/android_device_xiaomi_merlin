@@ -1,0 +1,23 @@
+[
+  {
+    "repository" : "android_kernel_xiaomi_mt6768",
+    "target_path": "kernel/xiaomi/mt6768",
+    "branch"     : "eleven"
+  },
+  {
+    "repository" : "PixelExperience/device_mediatek_sepolicy_vndr",
+    "target_path": "device/mediatek/sepolicy_vndr",
+    "remote"     : "github",
+    "branch"     : "eleven"
+  },
+  {
+    "repository" : "android_vendor_xiaomi_merlin",
+    "target_path": "vendor/xiaomi/merlin"
+    "branch"     : "eleven"
+  },
+  {
+    "repository" : "android_device_xiaomi_mt6768-common",
+    "target_path": "device/xiaomi/mt6768-common"
+    "branch"     : "eleven"
+  }
+]
